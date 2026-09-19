@@ -4,7 +4,7 @@ Recently, [Stefan Bocko](https://sk.linkedin.com/in/sbocko) and I had the opport
 
 Where the Langflow post showed a multi-agent system that *detects* risk — a compliance watchdog that reads contracts and news, then reports what it finds — this post is about the harder problem: an agent that's trusted to *act*. Issuing a refund, restarting a production instance, sending money — these are exactly the operations that have kept a lot of "autonomous agent" demos from turning into production systems. Strands recently shipped a feature aimed squarely at that gap: **Steering**.
 
-All the code from this post — the agent, the steering policy, and the AgentCore deployment files — is available on GitHub: `<YOUR_REPO_URL>`.
+All the code from this post — the agent, the steering policy, and the AgentCore deployment files — is available on GitHub: [mirec84/strands-refund-agent](https://github.com/mirec84/strands-refund-agent).
 
 ## What is Strands Agents
 
@@ -308,4 +308,4 @@ The shape is deliberately close to the Langflow post's architecture — same run
 
 Strands' Steering handler doesn't make an agent smarter — it makes it *trustworthy enough to let loose*. Writing the policy in plain English rather than a stack of `if` statements meant we never had to anticipate every phrasing of "this might be fraud"; the reviewing LLM just read the policy and the request together and made the call the same way a human reviewer would. Combined with Bedrock AgentCore Runtime for deployment, that's a genuinely new category of agent this SDK release unlocks: one that can be handed real, consequential tools without either locking it down to read-only or hoping it never makes an expensive mistake.
 
-All the code from this post — the agent, the steering policy, and the AgentCore deployment files — is available on GitHub: `<YOUR_REPO_URL>`.
+All the code from this post — the agent, the steering policy, and the AgentCore deployment files — is available on GitHub: [mirec84/strands-refund-agent](https://github.com/mirec84/strands-refund-agent).
